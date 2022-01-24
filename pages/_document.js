@@ -37,12 +37,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
             rel="stylesheet"
           ></link>
-          <meta charSet="UTF-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1"
-          ></meta>
-          <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         </Head>
         <body>
           <Main />
