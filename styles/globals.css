@@ -91,6 +91,15 @@ main h2 {
   margin: 0 0 2rem;
   font-size: 2rem;
 }
+.main__list_global {
+  display: none;
+}
+.main__grid_global {
+  display: none;
+}
+.main__select_global {
+  display: none;
+}
 
 @media all and (min-width: 768px) {
   html,

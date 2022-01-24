@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import styles from "../../../styles/MainContent.module.css";
 import Slider from "react-slick";
 import Card from "./Card";
@@ -54,10 +55,16 @@ const index = () => {
 
   return (
     <div>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
+      </Head>
       <main role="main">
         <Select
           options={options}
-          className={styles["main__select"]}
+          className={`${styles["main__select"]} main__select_global`}
           onChange={handleSelectChange}
         />
         <Slider {...settings} className={styles["main__silder"]}>
@@ -85,7 +92,7 @@ const index = () => {
             : ""}
         </Slider>
         {gridOn && (
-          <div className={styles["main__grid"]}>
+          <div className={`${styles["main__grid"]} main__grid_global`}>
             {people.length !== 0
               ? people.map((item, key) => {
                   const { positive, negative } = item.votes;
@@ -114,7 +121,7 @@ const index = () => {
           </div>
         )}
         {listOn && (
-          <div className={styles["main__list"]}>
+          <div className={`${styles["main__list"]} main__list_global`}>
             {people.length !== 0
               ? people.map((item, key) => {
                   const { positive, negative } = item.votes;
